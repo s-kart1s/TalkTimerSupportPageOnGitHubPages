@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - TalkTimer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .lang-switcher {
+            text-align: right;
+            padding: 10px 0;
+        }
+
+        .lang-switcher a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 0.9em;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            padding: 4px 12px;
+            border-radius: 20px;
+            transition: all 0.3s;
+        }
+
+        .lang-switcher a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px 20px 40px;
+            color: white;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .content {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 20px 0;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #667eea;
+            margin: 30px 0 15px 0;
+            font-size: 1.5em;
+            border-left: 4px solid #667eea;
+            padding-left: 15px;
+        }
+
+        .faq-item {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .faq-question {
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .faq-answer {
+            color: #555;
+        }
+
+        .contact-box {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 30px;
+            border-radius: 10px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .contact-box h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        .button {
+            display: inline-block;
+            margin: 10px;
+            padding: 12px 30px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .button:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+        }
+
+        .button.secondary {
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+
+        .button.secondary:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: white;
+            opacity: 0.8;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="lang-switcher">
+            <a href="../ja/support.html">🇯🇵 日本語</a>
+        </div>
+
+        <header>
+            <h1>Support</h1>
+        </header>
+
+        <div class="content">
+            <h2>Frequently Asked Questions (FAQ)</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">Q. Voice notifications don't play in the background</div>
+                <div class="faq-answer">
+                    <p>A. Please check the following settings:</p>
+                    <ul>
+                        <li>Notification permission: Go to Settings &gt; Notifications &gt; TalkTimer and make sure notifications are enabled</li>
+                        <li>Sound settings: Confirm that notification sounds are turned on</li>
+                        <li>Battery optimization: On some devices, you may need to exclude TalkTimer from battery optimization</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q. How do I use the Pomodoro timer?</div>
+                <div class="faq-answer">
+                    <p>A. To set up the Pomodoro timer:</p>
+                    <ul>
+                        <li>Enable "Pomodoro Mode" on the Add Timer screen</li>
+                        <li>Set your work duration, break duration, and number of cycles</li>
+                        <li>Once started, the app will automatically alternate between work and break sessions</li>
+                        <li>Countdown voice alerts will play at 10 and 5 seconds before each cycle ends</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q. How can I adjust the voice volume?</div>
+                <div class="faq-answer">
+                    <p>A. From the in-app settings screen, you can individually adjust the volume for countdown voice alerts and the end-of-timer sound.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q. The timer stops on its own</div>
+                <div class="faq-answer">
+                    <p>A. Please check the following:</p>
+                    <ul>
+                        <li>Confirm that background app refresh is allowed</li>
+                        <li>Turn off Low Power Mode</li>
+                        <li>Check your device's task-killing settings (relevant on some Android devices)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q. Can I run multiple timers at the same time?</div>
+                <div class="faq-answer">
+                    <p>A. Free users can run up to 3 timers simultaneously, while paid users can run up to 50. Start multiple timers from the timer list screen.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q. Can I back up my data?</div>
+                <div class="faq-answer">
+                    <p>A. Currently, all data is stored only on your device. Uninstalling the app will permanently delete your data.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q. Is TalkTimer free to use?</div>
+                <div class="faq-answer">
+                    <p>A. Yes, TalkTimer is free to use for basic features.</p>
+                </div>
+            </div>
+
+            <h2>Troubleshooting</h2>
+
+            <div class="faq-item">
+                <div class="faq-answer">
+                    <p><strong>If notifications are not arriving:</strong></p>
+                    <ul>
+                        <li>Try restarting the app</li>
+                        <li>Try restarting your device</li>
+                        <li>Make sure the app is updated to the latest version</li>
+                    </ul>
+
+                    <p><strong>If voice audio is not playing:</strong></p>
+                    <ul>
+                        <li>Check your device volume</li>
+                        <li>Disable Silent / Do Not Disturb mode</li>
+                        <li>Verify that audio works in other apps</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2>Contact Us</h2>
+            <div class="contact-box">
+                <h3>Still need help?</h3>
+                <p>Please reach out via our contact form:</p>
+                <a href="https://forms.gle/Dksqk7oy85kFtZuo9" class="button" target="_blank">Contact Form</a>
+                <p style="margin-top: 20px; color: #666; font-size: 0.9em;">
+                    To help us respond faster, please include the following in your message:<br>
+                    • Device model (e.g., iPhone 15 / Samsung Galaxy S24)<br>
+                    • OS version<br>
+                    • App version<br>
+                    • A detailed description of the issue
+                </p>
+                <p style="margin-top: 15px; color: #888; font-size: 0.85em;">
+                    Developers with a GitHub account can also submit issues via <a href="https://github.com/kartis/TalkTimer/issues" target="_blank" style="color: #667eea;">GitHub Issues</a>.
+                </p>
+            </div>
+
+            <h2>Feature Requests</h2>
+            <p>We welcome suggestions for new features. Feel free to share your ideas through the contact form.</p>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="index.html" class="button secondary">Back to Top</a>
+                <a href="privacy-policy.html" class="button secondary">Privacy Policy</a>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 TalkTimer. All rights reserved.</p>
+            <p><a href="index.html">Home</a> | <a href="privacy-policy.html">Privacy Policy</a></p>
+        </footer>
+    </div>
+</body>
+
+</html>

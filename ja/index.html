@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TalkTimer - 音声タイマーアプリ</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .lang-switcher {
+            text-align: right;
+            padding: 10px 0;
+        }
+
+        .lang-switcher a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 0.9em;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            padding: 4px 12px;
+            border-radius: 20px;
+            transition: all 0.3s;
+        }
+
+        .lang-switcher a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 20px 60px;
+            color: white;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .tagline {
+            font-size: 1.3em;
+            opacity: 0.95;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.1em;
+            opacity: 0.85;
+        }
+
+        .content {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 20px 0;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #667eea;
+            margin: 30px 0 20px 0;
+            font-size: 1.8em;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .feature {
+            padding: 20px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        .feature h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+
+        .feature-icon {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .button:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        .button.secondary {
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+
+        .button.secondary:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: white;
+            opacity: 0.8;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="lang-switcher">
+            <a href="../en/">🇺🇸 English</a>
+        </div>
+
+        <header>
+            <h1>⏰ TalkTimer</h1>
+            <p class="tagline">音声で知らせるタイマーアプリ</p>
+            <p class="subtitle">集中力を保ちながら時間管理</p>
+        </header>
+
+        <div class="content">
+            <h2>主な機能</h2>
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">🎙️</div>
+                    <h3>音声通知</h3>
+                    <p>残り時間を音声で読み上げ。画面を見なくても時間を確認できます。</p>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">🍅</div>
+                    <h3>ポモドーロタイマー</h3>
+                    <p>作業と休憩を繰り返すポモドーロテクニックに対応。集中力を最大化します。</p>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">📱</div>
+                    <h3>バックグラウンド動作</h3>
+                    <p>アプリを閉じても通知で時間をお知らせ。他のアプリを使いながらでもOK。</p>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">⚡</div>
+                    <h3>複数タイマー管理</h3>
+                    <p>複数のタイマーを同時に管理。料理やトレーニングなど様々な用途に。</p>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">🎨</div>
+                    <h3>シンプルなデザイン</h3>
+                    <p>直感的で使いやすいインターフェース。すぐに使い始められます。</p>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">🔔</div>
+                    <h3>カスタマイズ通知</h3>
+                    <p>10秒・5秒前のカウントダウンや、残り時間の読み上げをカスタマイズ可能。</p>
+                </div>
+            </div>
+
+            <h2>こんな方におすすめ</h2>
+            <ul style="margin-left: 20px; line-height: 2;">
+                <li>勉強や仕事で集中したい方</li>
+                <li>ポモドーロテクニックを実践したい方</li>
+                <li>料理やトレーニングで複数のタイマーを使いたい方</li>
+                <li>画面を見ずに時間を確認したい方</li>
+                <li>シンプルで使いやすいタイマーをお探しの方</li>
+            </ul>
+
+            <div class="buttons">
+                <a href="privacy-policy.html" class="button">プライバシーポリシー</a>
+                <a href="support.html" class="button secondary">サポート・お問い合わせ</a>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 TalkTimer. All rights reserved.</p>
+            <p><a href="privacy-policy.html">プライバシーポリシー</a> | <a href="support.html">サポート</a></p>
+        </footer>
+    </div>
+</body>
+
+</html>
